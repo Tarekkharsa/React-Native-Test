@@ -1,6 +1,5 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View } from "react-native";
-import { COLORS } from "../../constants";
 import LoginSection from "../../sections/Form";
 import ProductSection from "../../sections/product";
 

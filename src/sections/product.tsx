@@ -2,6 +2,7 @@ import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/EvilIcons";
 import WishListIcon from "../assets/icons/Path 3080.svg";
+import CompositeLayer from "../assets/icons/CompositeLayer.svg";
 import { useCount } from "../context/cart-context";
 
 const LoginSection = () => {
@@ -10,6 +11,24 @@ const LoginSection = () => {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        <Image
+          style={{ position: "absolute", top: -4, left: -4, zIndex: 100 }}
+          source={require("../assets/icons/CompositeLayer3.png")}
+        />
+
+        <View
+          style={{
+            backgroundColor: "white",
+            position: "absolute",
+            top: -60,
+            left: -60,
+            width: 150,
+            height: 150,
+            borderRadius: 100,
+            borderColor: "#c6cfd9",
+            borderWidth: 1,
+          }}
+        ></View>
         <View style={styles.carImageContainer}>
           <Image
             style={styles.carImage}
@@ -23,7 +42,7 @@ const LoginSection = () => {
               justifyContent: "space-between",
             }}
           >
-            <Text>400</Text>
+            <Text></Text>
           </View>
           <View
             style={{
@@ -57,7 +76,7 @@ const LoginSection = () => {
                   color: "#102654",
                 }}
               >
-                get a chance to WIN A
+                get a chance to <Text style={{ color: "red" }}>WIN</Text> A
               </Text>
               <Text
                 style={{
@@ -110,7 +129,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   card: {
-    height: "71%",
+    height: "73%",
     borderRadius: 20,
     borderColor: "#d5d5d5",
     borderWidth: 1,
@@ -138,6 +157,7 @@ const styles = StyleSheet.create({
     borderTopColor: "#dbdbdb",
     borderTopWidth: 1,
     zIndex: -1,
+    height: "50%",
   },
   image: {
     width: 100,

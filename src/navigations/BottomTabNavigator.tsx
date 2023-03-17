@@ -37,23 +37,9 @@ function BottomTabNavigator() {
           }
 
           return (
-            <View
-              style={{
-                position: "relative",
-              }}
-            >
+            <View style={styles.cartCountContainer}>
               {state.count > 0 && (
-                <View
-                  style={{
-                    position: "absolute",
-                    top: -18,
-                    width: 20,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#e03a3f",
-                    borderRadius: 100,
-                  }}
-                >
+                <View style={styles.cartCountText}>
                   <Text
                     style={{
                       color: "white",
@@ -121,5 +107,17 @@ const styles = StyleSheet.create({
     right: 0,
     left: 0,
     height: 92,
+  },
+  cartCountContainer: {
+    position: "relative",
+  },
+  cartCountText: {
+    position: "absolute",
+    top: -18,
+    width: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#e03a3f",
+    borderRadius: 100,
   },
 });

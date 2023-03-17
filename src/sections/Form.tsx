@@ -104,7 +104,7 @@ const LoginSection = () => {
           <Text style={styles.error}>{errors.password.message}</Text>
         )}
 
-        <View style={{ flexDirection: "row-reverse", gap: 10, width: "100%" }}>
+        <View style={{ flexDirection: "row-reverse", gap: 8, width: "100%" }}>
           <Controller
             control={control}
             render={({ field: { onChange, onBlur, value } }) => (
@@ -162,7 +162,10 @@ const LoginSection = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    paddingTop: 20,
+    paddingRight: 20,
+    paddingLeft: 20,
+    paddingBottom: 10,
     width: "100%",
   },
   heading: {
@@ -184,7 +187,7 @@ const styles = StyleSheet.create({
   input: {
     borderBottomWidth: 1,
     borderColor: "#ccc",
-    padding: 15,
+    padding: 13,
     marginBottom: 10,
   },
   message: {
