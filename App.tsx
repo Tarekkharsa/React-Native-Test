@@ -1,20 +1,14 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import * as React from "react";
 
+import BottomTabNavigator from "./src/navigations/BottomTabNavigator";
+import { CartProvider } from "./src/context/cart-context";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>test</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <CartProvider>
+        <BottomTabNavigator />
+      </CartProvider>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
